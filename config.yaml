@@ -1,0 +1,34 @@
+# Basic configuration example
+app:
+  name: MyApp
+  version: 1.0.0
+  environment: development
+
+# Server settings
+server:
+  host: localhost
+  port: 3000
+  ssl: false
+
+# Database configuration
+database:
+  host: localhost
+  port: 5432
+  name: mydb
+  user: admin
+
+# Feature flags
+features:
+  - logging
+  - authentication
+  - api
+
+# Nested configuration
+logging:
+  level: info
+  outputs:
+    - type: console
+      enabled: true
+    - type: file
+      enabled: false
+      path: /logs/app.log
